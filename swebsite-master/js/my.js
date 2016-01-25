@@ -2,7 +2,7 @@
 function $(id){
     return typeof id==='string'?document.getElementById(id):id;
 }
-window.onload=tab;
+
 
 function mouseover(t) 
 {
@@ -26,9 +26,12 @@ function tab(){
     var index=0; //第一个
     var timer=null;
     
-    //获取所有的div和要切换的内容
-    var lis=$('option').getElementsByTagName('li');
-    var divs=$('photoBox').getElementsByTagName('div');
+    //获取所有的div和要切换的内容   
+    var option=document.getElementById("option");
+    var photoBox=document.getElementById("photoBox");
+    // console.log(option);
+    var lis=option.getElementsByTagName('li');
+    var divs=photoBox.getElementsByTagName('div');
 
     //遍历每一个div且给他们绑定事件
     for(var i=0;i<divs.length;i++){
@@ -73,18 +76,21 @@ function tab(){
 
 }
 
+
 function change()
 { 
-
-    $('content0').style.display = 'none';
-    $('content1').style.display = 'block';
-
+    // var content0=document.getElementsByTagName('content0');
+    // var content1=document.getElementsByTagName('content1');
+    // content0.style.display = 'none';
+    // content1.style.display = 'block';
 }
 
 function back()
-{
-    $('content0').style.display = 'block';
-    $('content1').style.display = 'none';
+{   
+    // var content0=document.getElementsByTagName('content0');
+    // var content1=document.getElementsByTagName('content1');
+    // content0.style.display = 'block';
+    // content1.style.display = 'none';
 }
 
 /*var xmlhttp;  

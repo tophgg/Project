@@ -19,15 +19,24 @@
     #photoBox div a img { width:900px height:400px;}
 
     #intro { height: 290px; width: 650px; float:left; border: 1px; border-top: dashed 1px #ccc;border-left: dashed 1px #ccc; background: #fff;box-shadow:2px 2px 2px #bfbfbf}
-    #news { height: 290px; width: 237px; float:left; border:0px solid #000; margin-left: 10px; \background: #fff;border-top: dashed 1px #ccc;border-left: dashed 1px #ccc; box-shadow:2px 2px 2px #bfbfbf}
+    #news { height: 290px; width: 237px; float:left; border:0px solid #000; margin-left: 10px; background: #fff;border-top: dashed 1px #ccc;border-left: dashed 1px #ccc; box-shadow:2px 2px 2px #bfbfbf}
     #mid { height: 300px; width: 900px;margin-bottom: 10px;margin-top:10px;}
 
     </style>
-
+    <!-- 以下是弥补IE8以下不兼容boxshadow的修改方案 -->
+    <!--[if lte IE 8]>
+    <style>
+    #intro,#news{border-bottom:1px solid #ccc;border-right:1px solid #ccc;}
+    #intro{width: 649px;}
+    #news{width: 236px;}
+    </style>
+    <![endif]-->
 
     <script src="js/my.js"></script>
-    <script src="js/angular.min.js"></script>
-
+    <!-- // <script src="js/angular.min.js"></script> -->
+    <script type="text/javascript">
+        window.onload=tab;
+    </script>
 </head>
 <body>
 	<div id="banner"><img src="images/common/banner.jpg"></div>
