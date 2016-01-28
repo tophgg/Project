@@ -6,16 +6,35 @@
 	<link rel="stylesheet" type="text/css" href="../css/common.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link rel="stylesheet" type="text/css" href="../css/myIcon.css" />
+
+    <script type="text/javascript" src="../js/jquery.min.js">
+    </script><script type="text/javascript" src="../js/jquery.SuperSlide.2.1.1.js"></script>
 	<script src="../js/my.js"></script>
 	<style>
+        li{list-style: none;}
         .photo ul li{
             float:left;
             list-style: none;
-            padding:5px;
+            padding:5px 10px 5px 0;
             text-align: center;
         }
         .photo ul li span{display:block;}
-    </style>
+
+        /* 本例子tab css */
+        .slideTxtBox{ width:640px; border:1px solid #ddd; text-align:left; margin-top:20px; }
+        .slideTxtBox .hd{ height:50px; line-height:50px; background:#f4f4f4; border-bottom:1px solid #ddd;  }
+        .slideTxtBox .hd ul{ float:left;   height:32px; margin:0 auto;  }
+        .slideTxtBox .hd ul li{ float:left; padding:0 30px; cursor:pointer;  }
+        .slideTxtBox .hd ul li.on{ height:50px;  background-color: rgb(9, 82, 158);color:#fff; }
+        .slideTxtBox .bd ul{ width:100%;margin:0;padding:0;  zoom:1;  }
+        .slideTxtBox .bd ul table{ width:640px;margin:0;padding: 20px 0;  zoom:1;  }
+        .slideTxtBox .bd ul table tr{ width:640px;margin:0;padding:0;  zoom:1;  }
+        .slideTxtBox .bd ul table tr:nth-child(even){background:#BEE3F5;color:#666;}
+        .slideTxtBox .bd ul table tr td{ width:25%;margin:0;padding:5px 0;border:0;zoom:1;text-align:center;  }
+
+        .slideTxtBox .bd ul table tr th{width:25%;margin:0;padding:5px 0;zoom:1;text-align:center;}
+/*        .slideTxtBox .bd li{ height:24px; line-height:24px;   }
+*/    </style>
 
 </head>
 <body>
@@ -96,106 +115,151 @@
 
 	<div id="content">
             <h3>实习效果</h3>
-            <div class="title" style="margin:0 auto;margin:20px;">
-                <table border="" style="border:1px solid #666;border-collapse:collapse;">
-                    <tr>
-                        <th>编号</th>
-                        <th>学生姓名</th>
-                        <th>学校</th>
-                        <th>毕业年份</th>
-                        <th>公司名称</th>
-                        <th>职位 </th>
-                        <th>薪资</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>胡盼</td>
-                        <td>广州大学</td>
-                        <td>2015</td>
-                        <td>广东 汇能网络科技有限公司</td>
-                        <td>网络运维工程师</td>
-                        <td>5000</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>牛谱乐 </td>
-                        <td>广州大学</td>
-                        <td>2015</td>
-                        <td>华工信元有限公司</td>
-                        <td>安卓开发工程师</td>
-                        <td>5000</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>  
-                        <td>杨起富</td>
-                        <td>广州大学</td>
-                        <td>2015</td>
-                        <td>中软集团</td>
-                        <td>Linux系统工程师</td>
-                        <td>5200</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>曾俊峰</td>
-                        <td>广州大学</td>
-                        <td>2015</td>
-                        <td>广州乐商软件技术有限公司</td>
-                        <td>安卓开发工程师</td>
-                        <td>5500</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>王琳博</td>
-                        <td>广州大学</td>
-                        <td>2015</td>
-                        <td>深圳安泰有限公司</td>
-                        <td>安卓开发工程师</td>
-                        <td>6000</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>吴海俊</td>
-                        <td>广州大学</td>
-                        <td>2015</td>
-                        <td>广州汉佳信息科技有限公司</td>
-                        <td>驻点南航JAVA工程师</td>
-                        <td>5500</td>
-                    </tr>
-                </table>
-                <div class="photo">
-                <ul>
-                    <li>
-                        <img src="../images/p3/p32/zjf.jpg" alt="曾俊峰" width="190" height="200"/>
-                        <p>曾俊峰</p>
-                    </li>
-                    <li>
-                        <img src="../images/p3/p32/npl.jpg" alt="牛谱乐" width="190" height="200"/>
-                        <p>牛谱乐</p>
-                    </li>
-                    <li>
-                        <img src="../images/p3/p32/wlb.jpg" alt="王琳博" width="190" height="200"/>
-                        <p>王琳博</p>
-                    </li>
-                    <li>
-                        <img src="../images/p3/p32/ljj.jpg" alt="林家杰" width="190" height="200"/>
-                        <p>林家杰</p>
-                    </li>
-                    <li>
-                        <img src="../images/p3/p32/whj.jpg" alt="吴海俊" width="190" height="200"/>
-                        <p>吴海俊</p>
-                    </li>
-							<li>
-                        <img src="../images/p3/p32/yqf.jpg" alt="杨起富" width="190" height="200"/>
-                        <p>杨起富</p>
-                    </li>
-                </ul>
-                    
+        <div class="title" style="margin:0 auto;margin:20px;">
+            <table border="" style="border:1px solid #666;border-collapse:collapse;">
+                <tr>
+                    <th>编号</th>
+                    <th>学生姓名</th>
+                    <th>学校</th>
+                    <th>毕业年份</th>
+                    <th>公司名称</th>
+                    <th>职位 </th>
+                    <th>薪资</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>胡盼</td>
+                    <td>广州大学</td>
+                    <td>2015</td>
+                    <td>广东 汇能网络科技有限公司</td>
+                    <td>网络运维工程师</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>牛谱乐 </td>
+                    <td>广州大学</td>
+                    <td>2015</td>
+                    <td>华工信元有限公司</td>
+                    <td>安卓开发工程师</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>3</td>  
+                    <td>杨起富</td>
+                    <td>广州大学</td>
+                    <td>2015</td>
+                    <td>中软集团</td>
+                    <td>Linux系统工程师</td>
+                    <td>5200</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>曾俊峰</td>
+                    <td>广州大学</td>
+                    <td>2015</td>
+                    <td>广州乐商软件技术有限公司</td>
+                    <td>安卓开发工程师</td>
+                    <td>5500</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>王琳博</td>
+                    <td>广州大学</td>
+                    <td>2015</td>
+                    <td>深圳安泰有限公司</td>
+                    <td>安卓开发工程师</td>
+                    <td>6000</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>吴海俊</td>
+                    <td>广州大学</td>
+                    <td>2015</td>
+                    <td>广州汉佳信息科技有限公司</td>
+                    <td>驻点南航JAVA工程师</td>
+                    <td>5500</td>
+                </tr>
+            </table>
+            <div class="photo">
+            <ul>
+                <li>
+                    <img src="../images/p3/p32/zjf.jpg" alt="曾俊峰" width="190" height="200"/>
+                    <p>曾俊峰</p>
+                </li>
+                <li>
+                    <img src="../images/p3/p32/npl.jpg" alt="牛谱乐" width="190" height="200"/>
+                    <p>牛谱乐</p>
+                </li>
+                <li>
+                    <img src="../images/p3/p32/wlb.jpg" alt="王琳博" width="190" height="200"/>
+                    <p>王琳博</p>
+                </li>
+                <li>
+                    <img src="../images/p3/p32/ljj.jpg" alt="林家杰" width="190" height="200"/>
+                    <p>林家杰</p>
+                </li>
+                <li>
+                    <img src="../images/p3/p32/whj.jpg" alt="吴海俊" width="190" height="200"/>
+                    <p>吴海俊</p>
+                </li>
+						<li>
+                    <img src="../images/p3/p32/yqf.jpg" alt="杨起富" width="190" height="200"/>
+                    <p>杨起富</p>
+                </li>
+            </ul>
+            </div>
+
+            <div style="clear:both;"></div>
+            <!-- tab切换开始 -->
+            <div class="slideTxtBox">
+                <div class="hd"> 
+                    <ul>
+                        <li>Oracle认证榜</li>
+                        <li>HCIE认证榜</li>
+                        <li>CCIE认证榜</li>
+                        <li>XXX榜</li>
+                    </ul>
+                </div>
+                <div class="bd">
+                    <ul>
+                        <table>
+                            <tr><th>序号</th><th>姓名</th><th>认证课程</th><th>认证时间</th></tr>
+                            <tr><td>1</td><td>赵见辉</td><td>HCNP</td><td>2015-07-31</td></tr>
+                            <tr><td>2</td><td>邵浩文</td><td>HCIE-R&S</td><td>2015-07-29</td></tr>
+                        </table>
+                      
+                    </ul>
+                    <ul>
+                        <table>
+                            <tr><th>序号</th><th>姓名</th><th>认证课程</th><th>认证时间</th></tr>
+                            <tr><td>1</td><td>赵见辉</td><td>HCIE</td><td>2015-07-31</td></tr>
+                            <tr><td>2</td><td>邵浩文</td><td>HCIE</td><td>2015-07-29</td></tr>
+                        </table>
+                    </ul>
+                    <ul>
+                        <table>
+                            <tr><th>序号</th><th>姓名</th><th>认证课程</th><th>认证时间</th></tr>
+                            <tr><td>1</td><td>赵见辉</td><td>CCIE</td><td>2015-07-31</td></tr>
+                            <tr><td>2</td><td>邵浩文</td><td>CCIE</td><td>2015-07-29</td></tr>
+                        </table>
+                    </ul>
+                    <ul>
+                        <table>
+                            <tr><th>序号</th><th>姓名</th><th>认证课程</th><th>认证时间</th></tr>
+                            <tr><td>1</td><td>赵见辉</td><td>XXX</td><td>2015-07-31</td></tr>
+                            <tr><td>2</td><td>邵浩文</td><td>XXX</td><td>2015-07-29</td></tr>
+                        </table>
+                    </ul>
                 </div>
             </div>
-            
+            <!-- tab切换结束 --> 
+
         </div>
+
+    </div>
         <div id="foot" style="float:left;">版权所有 © 2015 广州大学 计算机科学与教育软件学院地址:广州市番禺大学城外环西路230号 邮编:510006</div>
     </div>
-	
+	<script type="text/javascript">jQuery(".slideTxtBox").slide();</script>
 	</body>
 </html>
