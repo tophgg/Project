@@ -6,11 +6,55 @@
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link rel="stylesheet" type="text/css" href="../css/myIcon.css" />
-    <script src="../js/my.js"></script>
- 
+    
+    <style type="text/css">
+        .mask{height:100%; width:100%; position:fixed; _position:absolute; top:0;left:0; z-index:1000;display:none;} 
+        .opacity{ opacity:0.5; filter:alpha(opacity=50);-moz-opacity:0.5; background-color:#000;zoom:1 } 
+        #img{text-align: center;position:fixed; top:100px;left:50%;margin-left:-400px;z-index: 1001;display:none;}
+        #content li{list-style: none;float:left;padding:30px;}
+
+        /*.box01{width:660px;margin:50px auto;position:relative;}
+        .box01 li{float:left;width:200px;text-align:center;padding-right:10px;margin-right:10px;height:120px;margin-bottom:15px;cursor:pointer;z-index:0;position:relative;}
+        .box01 li img{height:150px;margin:0 auto;}
+        .box01 li .in{position:absolute;left:0;top:0;width:180px;}
+        .box01 li .in p{display:none;text-align:left;}
+        .box01 li.on{z-index:99;}
+        .box01 li.on .in{padding:5px;border:1px solid #ccc;position:absolute;z-index:100;width:auto;text-align:center;top:-40px; background:#fff;}
+        .box01 li.on .in p{position:relative;display:block;}
+        .box01 li.on img{height:auto;margin-bottom:8px;}*/
+    </style>
+
+    <script type="text/javascript" src="../js/my.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function(){ 
+        $('.mask').click(function() {
+            $(".mask").fadeOut();
+            $("#img img").fadeOut();
+            // $("#img img").attr("src","");
+            $(".img").fadeOut();
+
+        })
+        $('img').click(function() {
+            $(".mask").fadeIn();
+            $("#img img").fadeIn();
+            var img=$(this).attr("src");
+            // alert(img);
+            $("#img img").attr("src",img);
+            $("#img").fadeIn();
+            
+        })
+    })
+    </script>
 </head>
 <body>
-
+    <div class="mask opacity" id="mask">
+        
+    </div>
+    <div id="img" style="">
+        <img src="" style="width:800px;">
+    </div>
+    
     <div id="banner"><img src="../images/common/banner.jpg"></div>
 
        <div id="nav" >
@@ -72,30 +116,58 @@
     <div id="pos">您当前的位置 > <a href="#">首页</a>  > <a href="#">建设成果</a> > <span>自编教材</span></div>
     <div id="container">
         <div id="left-choose">
-        <ul>
-            <h3><i class="imooc-icon ihead">&#xe603;</i>建设成果</h3>
-            <li><i class="imooc-icon">&#xf078;</i><a href="../page3/page30.html">场地建设</a></li>
-            <li><i class="imooc-icon">&#xf078;</i><a href="../page3/page31.html">实习大纲</a></li>
-            <li style="background-color: #666;font-weight:bold;border-bottom:none;"><i class="imooc-icon">&#xf078;</i><a href="../page3/page32.html" style="color:#fff">自编教材</a></li>
-            <li><i class="imooc-icon">&#xf078;</i><a href="../page3/page33.html">交流推广</a></li>
-            <li style="border-bottom:none;"><a href="../page3/page34.html"><i class="imooc-icon">&#xf078;</i>实习效果</a></li>
-        </ul>
-    </div>
+            <ul>
+                <h3><i class="imooc-icon ihead">&#xe603;</i>建设成果</h3>
+                <li><i class="imooc-icon">&#xf078;</i><a href="../page3/page30.html">场地建设</a></li>
+                <li><i class="imooc-icon">&#xf078;</i><a href="../page3/page31.html">实习大纲</a></li>
+                <li style="background-color: #666;font-weight:bold;border-bottom:none;"><i class="imooc-icon">&#xf078;</i><a href="../page3/page32.html" style="color:#fff">自编教材</a></li>
+                <li><i class="imooc-icon">&#xf078;</i><a href="../page3/page33.html">交流推广</a></li>
+                <li style="border-bottom:none;"><a href="../page3/page34.html"><i class="imooc-icon">&#xf078;</i>实习效果</a></li>
+            </ul>
+        </div>
 
     
 
-    <div id="content">
+        <div id="content">
             <h3>自编教材</h3>
-            <img src="../images/p3/p32/jc1.jpg" alt="教材1" width="200px" height="150px"/>
-          	<img src="../images/p3/p32/jc2.jpg" alt="教材2" width="200px" height="150px"/>
-				<img src="../images/p3/p32/jc3.jpg" alt="教材3" width="200px" height="150px"/>
-				<img src="../images/p3/p32/jc4.jpg" alt="教材4" width="200px" height="150px"/>
-				<img src="../images/p3/p32/jc5.jpg" alt="教材5" width="200px" height="150px"/>
-				<img src="../images/p3/p32/jc6.jpg" alt="教材6" width="200px" height="150px"/>
-				<img src="../images/p3/p32/jc7.jpg" alt="教材7" width="200px" height="150px"/>
-            
-            
-            
+            <ul class="box01">
+                <li>
+                    <!-- <div class="in"> -->
+                        <img src="../images/p3/p32/jc1.jpg" alt="教材1" width="240px" height="150px"/>
+                    <!-- </div> -->
+                </li>
+                <li>
+                    <!-- <div class="in"> -->
+                        <img src="../images/p3/p32/jc2.jpg" alt="教材2" width="240px" height="150px"/>
+                    <!-- </div> -->
+                </li>
+                <li>
+                    <!-- <div class="in"> -->
+                        <img src="../images/p3/p32/jc3.jpg" alt="教材3" width="240px" height="150px"/>
+                    <!-- </div> -->
+                </li>
+                <li>
+                    <!-- <div class="in"> -->
+                        <img src="../images/p3/p32/jc4.jpg" alt="教材4" width="240px" height="150px"/>
+                    <!-- </div> -->
+                </li>
+                <li>
+                    <!-- <div class="in"> -->
+                        <img src="../images/p3/p32/jc5.jpg" alt="教材5" width="240px" height="150px"/>
+                    <!-- </div> -->
+                </li>
+                <li>
+                    <!-- <div class="in"> -->
+                        <img src="../images/p3/p32/jc6.jpg" alt="教材6" width="240px" height="150px"/>
+                    <!-- </div> -->
+                </li>
+                <li>
+                    <!-- <div class="in"> -->
+                        <img src="../images/p3/p32/jc7.jpg" alt="教材7" width="240px" height="150px"/>
+                    <!-- </div> -->
+                </li>
+            </ul>
+         
         </div>
         <div id="foot" style="float:left;">版权所有 © 2015 广州大学 计算机科学与教育软件学院地址:广州市番禺大学城外环西路230号 邮编:510006</div>
     </div>
