@@ -10,18 +10,9 @@
     <style type="text/css">
         .mask{height:100%; width:100%; position:fixed; _position:absolute; top:0;left:0; z-index:1000;display:none;} 
         .opacity{ opacity:0.5; filter:alpha(opacity=50);-moz-opacity:0.5; background-color:#000;zoom:1 } 
-        #img{text-align: center;position:fixed; top:100px;left:50%;margin-left:-400px;z-index: 1001;display:none;}
+        #img{text-align: center;position:fixed; top:100px;left:50%;margin-left:-400px;z-index: 1001;display:none;cursor:pointer;}
         #content li{list-style: none;float:left;padding:30px;}
-
-        /*.box01{width:660px;margin:50px auto;position:relative;}
-        .box01 li{float:left;width:200px;text-align:center;padding-right:10px;margin-right:10px;height:120px;margin-bottom:15px;cursor:pointer;z-index:0;position:relative;}
-        .box01 li img{height:150px;margin:0 auto;}
-        .box01 li .in{position:absolute;left:0;top:0;width:180px;}
-        .box01 li .in p{display:none;text-align:left;}
-        .box01 li.on{z-index:99;}
-        .box01 li.on .in{padding:5px;border:1px solid #ccc;position:absolute;z-index:100;width:auto;text-align:center;top:-40px; background:#fff;}
-        .box01 li.on .in p{position:relative;display:block;}
-        .box01 li.on img{height:auto;margin-bottom:8px;}*/
+        #content li img{cursor:pointer;}
     </style>
 
     <script type="text/javascript" src="../js/my.js"></script>
@@ -130,7 +121,7 @@
 
         <div id="content">
             <h3>自编教材</h3>
-            <ul class="box01">
+            <ul>
                 <li>
                     <!-- <div class="in"> -->
                         <img src="../images/p3/p32/jc1.jpg" alt="教材1" width="240px" height="150px"/>
