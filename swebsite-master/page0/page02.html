@@ -7,12 +7,20 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link rel="stylesheet" type="text/css" href="../css/myIcon.css" />
 	<script src="../js/my.js"></script>
-	<style type="text/css">
-
-    </style>
-
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <!-- 图片放大js -->
+    <script type="text/javascript" src="../js/img.js"></script>
 </head>
 <body>
+
+    <!-- start遮罩层&&扩大图 -->
+    <div class="mask opacity" id="mask">
+        
+    </div>
+    <div id="img_expand" style="">
+        <img src="" style="width:800px;max-height:800px;">
+    </div>
+    <!-- end遮罩层&&扩大图 -->
 
 	<div id="banner"><img src="../images/common/banner.jpg"></div>
 
@@ -90,13 +98,25 @@
 	<div id="content">
     <h3>校企合作</h3>
         <div class="title" style="margin:10px;">
-            
             <h4>合作企业</h4>
-            <img src="../images/p0/p02/hzqy.png" alt="合作企业" width="660px" height="400px"/>
-            <br />
-            <h4>合作院校</h4>
-            <img src="../images/p0/p02/hzyx.jpg" alt="合作院校" width=“300px” height="300px"/>
         </div>
+        <ul class="img_ul">
+            <li style="padding:0">
+                <img src="../images/p0/p02/hzqy.png" alt="合作企业" width="630px" height="400px"/>
+            </li>
+        </ul>
+            
+            <br />
+        <div class="title" style="margin:10px;">
+            <h4>合作院校</h4>
+        </div>
+        <ul class="img_ul">
+            <li>
+                <img src="../images/p0/p02/hzyx.jpg" alt="合作院校" width=“300px” height="300px"/>
+            </li>
+        </ul>
+            
+        
         
     </div>
 

@@ -7,12 +7,21 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link rel="stylesheet" type="text/css" href="../css/myIcon.css" />
 	<script src="../js/my.js"></script>
-	<style type="text/css">
-
-    </style>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <!-- 图片放大js -->
+    <script type="text/javascript" src="../js/img.js"></script>
 
 </head>
 <body>
+
+    <!-- start遮罩层&&扩大图 -->
+    <div class="mask opacity" id="mask">
+        
+    </div>
+    <div id="img_expand" style="">
+        <img src="" style="width:800px;">
+    </div>
+    <!-- end遮罩层&&扩大图 -->
 
 	<div id="banner"><img src="../images/common/banner.jpg"></div>
 
@@ -88,9 +97,13 @@
     </div>
 
     <div id="content">
-    <h3>共建协议</h3>
-    <img src="../images/p0/p03/gjxy1.jpg" alt="共建协议1" width="660px" />
-    <img src="../images/p0/p03/gjxy2.jpg" alt="共建协议2"width="660px"  />
+        <h3>共建协议</h3>
+        <div class="" style="text-align:center;margin-top:10px;">
+            <img src="../images/p0/p03/gjxy1.jpg" alt="共建协议1" width="660px;" />
+            <div></div>
+            <img src="../images/p0/p03/gjxy2.jpg" alt="共建协议2"width="660px"  />
+        </div>
+        
 
         
     </div>

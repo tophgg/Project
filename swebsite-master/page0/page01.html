@@ -6,12 +6,23 @@
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link rel="stylesheet" type="text/css" href="../css/myIcon.css" />
-	<script src="../js/my.js"></script>
+	<script type="text/javascript" src="../js/my.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <!-- 图片放大js -->
+    <script type="text/javascript" src="../js/img.js"></script>
 </head>
 <style type="text/css">
-    .pic{width: 200px;height: 200px;}
+    .pic{width: 240px;height: 200px;}
 </style>  
 <body>
+    <!-- start遮罩层&&扩大图 -->
+    <div class="mask opacity" id="mask">
+        
+    </div>
+    <div id="img_expand" style="">
+        <img src="" style="width:800px;max-height:800px;">
+    </div>
+    <!-- end遮罩层&&扩大图 -->
 
 	<div id="banner"><img src="../images/common/banner.jpg"></div>
 
@@ -89,23 +100,66 @@
             <h3>教学环境</h3>
             <div class="title" style="margin:0 auto; margin:0 0 10px 10px;">
                 <p>功能室</p>
-                <img class="pic"src="../images/p0/p01/gns0.jpg" alt="功能室0" />
-                <img class="pic" src="../images/p0/p01/gns1.jpg" alt="功能室1" />
-                    <img class="pic" src="../images/p0/p01/gns2.jpg" alt="功能室2" />
-                    <img class="pic" src="../images/p0/p01/gns3.jpg" alt="功能室3" />
-                    <img class="pic" src="../images/p0/p01/gns4.jpg" alt="功能室4" />
-                    <img class="pic" src="../images/p0/p01/gns5.jpg" alt="功能室5" />
-                    <p>机房-华为规格机架</p>
-                    <img class="pic" src="../images/p0/p01/jf-hw.jpg" alt="机房-华为规格机架" />
-                    <p>机房-思科规格机架</p>
-                    <img class="pic" src="../images/p0/p01/jf-sk.jpg" alt="机房-思科规格机架" />
-                    <p>机房</p>
-                    <img class="pic" src="../images/p0/p01/jf.jpg" alt="机房" />
-                    <p>讨论区</p>
-                    <img class="pic" src="../images/p0/p01/yzl.jpg" alt="右侧走廊" />
-                    <img class="pic" src="../images/p0/p01/zzl.jpg" alt="左侧走廊" />
-                </div>
             </div>
+            <ul class="img_ul">
+                <li>
+                    <img class="pic"src="../images/p0/p01/gns0.jpg" alt="功能室0" />
+                </li>
+                <li>
+                    <img class="pic" src="../images/p0/p01/gns1.jpg" alt="功能室1" />
+                </li>
+                <li>
+                    <img class="pic" src="../images/p0/p01/gns2.jpg" alt="功能室2" />
+                </li>
+                <li>
+                    <img class="pic" src="../images/p0/p01/gns3.jpg" alt="功能室3" />
+                <li>    
+                    <img class="pic" src="../images/p0/p01/gns4.jpg" alt="功能室4" />
+                <li>
+                    <img class="pic" src="../images/p0/p01/gns5.jpg" alt="功能室5" />
+                </li>
+                <div style="clear:both"></div>
+            </ul>
+            <div class="title" style="margin:0 auto; margin:0 0 10px 10px;">
+                <p>机房-华为规格机架</p>
+            </div>
+            <ul class="img_ul">
+                <li>
+                    <img class="pic" src="../images/p0/p01/jf-hw.jpg" alt="机房-华为规格机架" />
+                </li>
+                <div style="clear:both"></div>
+            </ul>
+            <div class="title" style="margin:0 auto; margin:0 0 10px 10px;">
+                <p>机房-思科规格机架</p>
+            </div>
+            <ul class="img_ul">
+                <li>
+                    <img class="pic" src="../images/p0/p01/jf-sk.jpg" alt="机房-思科规格机架" />
+                </li>
+                <div style="clear:both"></div>
+            </ul>
+            <div class="title" style="margin:0 auto; margin:0 0 10px 10px;">
+                <p>机房</p>
+            </div>
+            <ul class="img_ul">
+                <li>
+                    <img class="pic" src="../images/p0/p01/jf.jpg" alt="机房" />
+                </li>
+                <div class="" style="clear:both;height:10px;width:200px;"></div>
+            </ul>
+            <div class="title" style="margin:0 auto; margin:0 0 10px 10px;">
+                <p>讨论区</p>
+            </div>
+            <ul class="img_ul">
+                <li>
+                    <img class="pic" src="../images/p0/p01/yzl.jpg" alt="右侧走廊" />
+                </li>
+                <li>    
+                    <img class="pic" src="../images/p0/p01/zzl.jpg" alt="左侧走廊" />
+                </li>
+                <!-- <li><div style="clear:both"></div></li> -->
+            </ul>    
+            <!-- </div> -->
         </div>
 
          <div id="foot" style="float:left;">版权所有 © 2015 广州大学 计算机科学与教育软件学院地址:广州市番禺大学城外环西路230号 邮编:510006</div>

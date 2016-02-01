@@ -7,9 +7,20 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link rel="stylesheet" type="text/css" href="../css/myIcon.css" />
 	<script src="../js/my.js"></script>
-
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <!-- 图片放大js -->
+    <script type="text/javascript" src="../js/img.js"></script>
 </head>
 <body>
+
+    <!-- start遮罩层&&扩大图 -->
+    <div class="mask opacity" id="mask">
+        
+    </div>
+    <div id="img_expand" style="">
+        <img src="" style="width:800px;max-height:600px;">
+    </div>
+    <!-- end遮罩层&&扩大图 -->
 
 	<div id="banner"><img src="../images/common/banner.jpg"></div>
 
@@ -74,7 +85,7 @@
     <div id="container">
         <div id="left-choose">
         <ul>
-            <h3><i class="imooc-icon ihead">&#xe603;</i>建设成果</h3>
+            <h3><i class="imooc-icon ihead">&#xf0d7;</i>建设成果</h3>
             <li style="background-color: #666;font-weight:bold;border-bottom:none;"><i class="imooc-icon">&#xf078;</i><a href="../page3/page30.html" style="color:#fff">场地建设</a></li>
             <li><i class="imooc-icon">&#xf078;</i><a href="../page3/page31.html">实习大纲</a></li>
             <li><i class="imooc-icon">&#xf078;</i><a href="../page3/page32.html">自编教材</a></li>
@@ -86,20 +97,41 @@
 	
 
 	<div id="content">
-            <h3>场地建设</h3>
-            <h2>项目讨论室</h2>
-				
-				<img src="../images/p2/p22/gns0.jpg" alt="项目讨论室0" width="200px" height="150px"/>
-            <img src="../images/p2/p22/gns1.jpg" alt="项目讨论室1" width="200px" height="150px"/>
-            <img src="../images/p2/p22/gns2.jpg" alt="项目讨论室2" width="200px" height="150px"/>
-            <img src="../images/p2/p22/gns3.jpg" alt="项目讨论室3" width="200px" height="150px"/>
+        <h3>场地建设</h3>
+            <h4 style="margin:20px 10px;">项目讨论室</h4>
+			<ul class="img_ul">
+                <li>	
+			        <img src="../images/p2/p22/gns0.jpg" alt="项目讨论室0" width="240px" height="150px"/>
+                </li>
+                <li>
+                    <img src="../images/p2/p22/gns1.jpg" alt="项目讨论室1" width="240px" height="150px"/>
+                </li>
+                <li>
+                    <img src="../images/p2/p22/gns2.jpg" alt="项目讨论室2" width="240px" height="150px"/>
+                </li>
+                <li>
+                    <img src="../images/p2/p22/gns3.jpg" alt="项目讨论室3" width="240px" height="150px"/>
+                </li>
+                <div style="clear:both"></div>
+            </ul>
             
-            <h2>远程控制室</h2>
-            <img src="../images/p2/p22/yckzs.jpg" alt="远程控制室" width="200px" height="100px"/>
             
-            <h2>云计算教室</h2>
-            <img src="../images/p2/p22/yjsjs.jpg" alt="云计算教室" width="200px" height="100px"/>
             
+            <h4 style="margin:20px 10px;">远程控制室</h4>
+            <ul class="img_ul">
+                <li>
+                    <img src="../images/p2/p22/yckzs.jpg" alt="远程控制室" width="240px" height="150px"/>
+                </li>
+                <div style="200px;height:10px;clear:both;"></div>
+            </ul>
+            
+            
+            <h4 style="margin:20px 10px;">云计算教室</h4>
+            <ul class="img_ul">
+                <li>
+                    <img src="../images/p2/p22/yjsjs.jpg" alt="云计算教室" width="240px" height="150px"/>
+                </li>
+            </ul>
         </div>
         <div id="foot" style="float:left;">版权所有 © 2015 广州大学 计算机科学与教育软件学院地址:广州市番禺大学城外环西路230号 邮编:510006</div>
     </div>

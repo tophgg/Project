@@ -8,43 +8,23 @@
     <link rel="stylesheet" type="text/css" href="../css/myIcon.css" />
     
     <style type="text/css">
-        .mask{height:100%; width:100%; position:fixed; _position:absolute; top:0;left:0; z-index:1000;display:none;} 
-        .opacity{ opacity:0.5; filter:alpha(opacity=50);-moz-opacity:0.5; background-color:#000;zoom:1 } 
-        #img{text-align: center;position:fixed; top:100px;left:50%;margin-left:-400px;z-index: 1001;display:none;cursor:pointer;}
-        #content li{list-style: none;float:left;padding:30px;}
-        #content li img{cursor:pointer;}
+       
     </style>
 
     <script type="text/javascript" src="../js/my.js"></script>
     <script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(function(){ 
-        $('.mask').click(function() {
-            $(".mask").fadeOut();
-            $("#img img").fadeOut();
-            // $("#img img").attr("src","");
-            $(".img").fadeOut();
-
-        })
-        $('img').click(function() {
-            $(".mask").fadeIn();
-            $("#img img").fadeIn();
-            var img=$(this).attr("src");
-            // alert(img);
-            $("#img img").attr("src",img);
-            $("#img").fadeIn();
-            
-        })
-    })
-    </script>
+    <!-- 图片放大js -->
+    <script type="text/javascript" src="../js/img.js"></script>
 </head>
 <body>
+    <!-- start遮罩层&&扩大图 -->
     <div class="mask opacity" id="mask">
         
     </div>
-    <div id="img" style="">
+    <div id="img_expand" style="">
         <img src="" style="width:800px;">
     </div>
+    <!-- end遮罩层&&扩大图 -->
     
     <div id="banner"><img src="../images/common/banner.jpg"></div>
 
@@ -108,7 +88,7 @@
     <div id="container">
         <div id="left-choose">
             <ul>
-                <h3><i class="imooc-icon ihead">&#xe603;</i>建设成果</h3>
+                <h3><i class="imooc-icon ihead">&#xf0d7;</i>建设成果</h3>
                 <li><i class="imooc-icon">&#xf078;</i><a href="../page3/page30.html">场地建设</a></li>
                 <li><i class="imooc-icon">&#xf078;</i><a href="../page3/page31.html">实习大纲</a></li>
                 <li style="background-color: #666;font-weight:bold;border-bottom:none;"><i class="imooc-icon">&#xf078;</i><a href="../page3/page32.html" style="color:#fff">自编教材</a></li>
@@ -121,7 +101,7 @@
 
         <div id="content">
             <h3>自编教材</h3>
-            <ul>
+            <ul class="img_ul">
                 <li>
                     <!-- <div class="in"> -->
                         <img src="../images/p3/p32/jc1.jpg" alt="教材1" width="240px" height="150px"/>
